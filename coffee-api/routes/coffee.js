@@ -1,6 +1,7 @@
 const express = require('express');
+const config = require('config');
 const router = express.Router();
-const HOST = 'MK-001';
+const HOST = config.get('host');
 const CAPPUCCINO = 'cappuccino';
 
 router.post('/make', (req, res) => {
